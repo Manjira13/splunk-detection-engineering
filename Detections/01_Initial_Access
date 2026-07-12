@@ -1,1 +1,85 @@
+# Initial Access
 
+## Overview
+
+The **Initial Access** tactic covers techniques adversaries use to gain an initial foothold within a target environment. Successful initial access enables attackers to execute malicious code, establish persistence, and continue through the attack lifecycle.
+
+This section contains Splunk detection use cases designed to identify suspicious authentication attempts, remote access activity, and exploitation techniques commonly associated with initial compromise.
+
+---
+
+## Detection Coverage
+
+| Detection                                | MITRE ATT&CK | Severity | Status           |
+|------------------------------------------|--------------|----------|------------------|
+| Multiple Failed Logins                   | T1110        | Medium   | Work in progress |
+| Successful Login After Multiple Failures | T1110        | High     | Work in progress |
+| Suspicious RDP Authentication            | T1133        | High     | Work in progress |
+| Suspicious SMB Authentication            | T1021.002    | High     | Work in progress |
+| VPN Login From New Location              | T1133        | Medium   | Work in progress |
+
+---
+
+## Planned Detections
+
+### Detection 1: Multiple Failed Logins
+
+Detect repeated failed authentication attempts that may indicate password spraying or brute-force attacks.
+
+---
+
+### Detection 2: Successful Login After Multiple Failures
+
+Identify accounts that successfully authenticate immediately after multiple failed login attempts.
+
+---
+
+### Detection 3: Suspicious RDP Authentication
+
+Detect Remote Desktop Protocol (RDP) logins originating from unusual hosts, external IP addresses, or outside normal business hours.
+
+---
+
+### Detection 4: Suspicious SMB Authentication
+
+Identify unusual SMB authentication activity that may indicate unauthorized access attempts or lateral movement.
+
+---
+
+### Detection 5: VPN Login From New Location
+
+Detect VPN logins originating from previously unseen geographic locations or IP ranges.
+
+---
+
+## Detection Development Methodology
+
+Each detection within this section will include:
+
+- Objective
+- MITRE ATT&CK Mapping
+- Data Sources
+- Required Logs
+- Splunk SPL Query
+- Detection Logic
+- Investigation Workflow
+- Expected Results
+- False Positives
+- Tuning Recommendations
+- Response Guidance
+- References
+
+---
+
+## Future Improvements
+
+Additional Initial Access detections may include:
+
+- Public-facing Application Exploitation
+- External Remote Services
+- Valid Accounts
+- Spearphishing Link Detection
+- Spearphishing Attachment Detection
+- Drive-by Compromise
+
+These detections will be added as the repository expands.
